@@ -23,7 +23,7 @@ try:
     create_table_query = sql.SQL("""
         CREATE TABLE guidocasella_coderhouse.STOCKS (
             id INT IDENTITY(1,1),
-            ticker INT ,
+            ticker VARCHAR(30),
             "open" FLOAT,
             high FLOAT,
             low FLOAT,
