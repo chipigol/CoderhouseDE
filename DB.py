@@ -22,7 +22,8 @@ try:
     # Define the create table query
     create_table_query = sql.SQL("""
         CREATE TABLE guidocasella_coderhouse.STOCKS (
-            id INT PRIMARY KEY,
+            id INT IDENTITY(1,1),
+            ticker INT ,
             "open" FLOAT,
             high FLOAT,
             low FLOAT,
@@ -30,7 +31,8 @@ try:
             volume INT,
             dividends FLOAT,
             stock_splits FLOAT,
-            date DATE
+            date DATE,
+            PRIMARY KEY (id)
         )
     """)
 
